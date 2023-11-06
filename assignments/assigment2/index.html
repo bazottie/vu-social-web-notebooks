@@ -20,11 +20,13 @@
         });
         const kmlLayer = new google.maps.KmlLayer({
           url: "https://raw.githubusercontent.com/bazottie/sw23-21/main/assignments/assigment2/location.kml",
-          suppressInfoWindows: true,
           map: map,
         });
 
+        console.log(kmlLayer);
+
         kmlLayer.addListener("click", (kmlEvent) => {
+          console.log(kmlEvent);
           const text = kmlEvent.featureData.description;
 
           showInContentWindow(text);
