@@ -16,10 +16,10 @@
       function initMap() {
         const map = new google.maps.Map(document.getElementById("map"), {
           zoom: 12,
-          center: { lat: 37.06, lng: -95.68 },
+          center: { lat: 52.37278, lng: 4.89361 },
         });
         const kmlLayer = new google.maps.KmlLayer({
-          url: "./location.kml",
+          url: "https://raw.githubusercontent.com/bazottie/sw23-21/main/assignments/assigment2/location.kml",
           suppressInfoWindows: true,
           map: map,
         });
@@ -39,5 +39,9 @@
 
       window.initMap = initMap;
     </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVCBGzije7PuQQwkW4UIlDZjfrO4oLoFk&callback=initMap&v=weekly"
+      defer
+    ></script>
   </body>
 </html>
